@@ -1,0 +1,482 @@
+[
+    {
+        "id": "data-analyst-intern",
+        "title": "Data Analyst Intern",
+        "employer_name": "Analytics Solutions Co.",
+        "description": "Assist senior analysts in collecting, cleaning, and analyzing data sets. Create reports and visualizations.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/data-analyst-intern",
+        "date_posted": "2025-04-22T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "ux-designer-3",
+        "title": "UX Designer",
+        "employer_name": "Creative Designs Ltd.",
+        "description": "Design user interfaces for web and mobile applications. Conduct user research and usability testing.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/ux-designer-3",
+        "date_posted": "2025-04-25T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "frontend-dev-4",
+        "title": "Frontend Developer",
+        "employer_name": "Web Innovators",
+        "description": "Build responsive user interfaces using React and modern JavaScript frameworks.",
+        "location": "San Francisco, CA",
+        "apply_url": "https://example.com/careers/frontend-dev-4",
+        "date_posted": "2025-04-26T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "backend-engineer-5",
+        "title": "Backend Engineer (Python)",
+        "employer_name": "Data Driven Systems",
+        "description": "Design and implement scalable backend services using Python (Django/Flask). Work with databases and APIs.",
+        "location": "Austin, TX",
+        "apply_url": "https://example.com/careers/backend-engineer-5",
+        "date_posted": "2025-04-27T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "product-manager-6",
+        "title": "Product Manager",
+        "employer_name": "CampusConnect Partner Inc.",
+        "description": "Define product strategy, gather requirements, and work with engineering teams to deliver features.",
+        "location": "Seattle, WA",
+        "apply_url": "https://example.com/careers/product-manager-6",
+        "date_posted": "2025-04-28T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "qa-engineer-7",
+        "title": "QA Engineer",
+        "employer_name": "Quality Assurance Pros",
+        "description": "Develop and execute test plans, identify bugs, and ensure software quality.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/qa-engineer-7",
+        "date_posted": "2025-04-29T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "devops-engineer-8",
+        "title": "DevOps Engineer",
+        "employer_name": "Cloud Solutions Group",
+        "description": "Manage CI/CD pipelines, infrastructure automation (AWS/Azure), and monitoring systems.",
+        "location": "Chicago, IL",
+        "apply_url": "https://example.com/careers/devops-engineer-8",
+        "date_posted": "2025-04-30T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "marketing-intern-9",
+        "title": "Marketing Intern",
+        "employer_name": "Growth Hackers LLC",
+        "description": "Support marketing campaigns, manage social media, and analyze campaign performance.",
+        "location": "Boston, MA",
+        "apply_url": "https://example.com/careers/marketing-intern-9",
+        "date_posted": "2025-05-01T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "fullstack-dev-10",
+        "title": "Full Stack Developer (Node.js/React)",
+        "employer_name": "Web Innovators",
+        "description": "Develop both frontend and backend components for web applications.",
+        "location": "San Francisco, CA",
+        "apply_url": "https://example.com/careers/fullstack-dev-10",
+        "date_posted": "2025-05-02T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "cloud-architect-11",
+        "title": "Cloud Architect",
+        "employer_name": "Cloud Solutions Group",
+        "description": "Design and oversee cloud infrastructure strategy and implementation.",
+        "location": "Chicago, IL",
+        "apply_url": "https://example.com/careers/cloud-architect-11",
+        "date_posted": "2025-05-03T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "mobile-dev-ios-12",
+        "title": "Mobile Developer (iOS)",
+        "employer_name": "App Creators Inc.",
+        "description": "Develop native iOS applications using Swift and Xcode.",
+        "location": "Cupertino, CA",
+        "apply_url": "https://example.com/careers/mobile-dev-ios-12",
+        "date_posted": "2025-05-04T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "mobile-dev-android-13",
+        "title": "Mobile Developer (Android)",
+        "employer_name": "App Creators Inc.",
+        "description": "Develop native Android applications using Kotlin and Android Studio.",
+        "location": "Mountain View, CA",
+        "apply_url": "https://example.com/careers/mobile-dev-android-13",
+        "date_posted": "2025-05-04T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "data-scientist-14",
+        "title": "Data Scientist",
+        "employer_name": "Analytics Solutions Co.",
+        "description": "Apply machine learning techniques to solve business problems. Develop predictive models.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/data-scientist-14",
+        "date_posted": "2025-05-05T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "hr-specialist-15",
+        "title": "HR Specialist",
+        "employer_name": "People First Consulting",
+        "description": "Manage recruitment processes, employee relations, and benefits administration.",
+        "location": "Denver, CO",
+        "apply_url": "https://example.com/careers/hr-specialist-15",
+        "date_posted": "2025-05-05T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "project-manager-16",
+        "title": "Project Manager",
+        "employer_name": "Agile Delivery Experts",
+        "description": "Lead software development projects using Agile methodologies. Manage scope, schedule, and budget.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/project-manager-16",
+        "date_posted": "2025-05-06T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "systems-admin-17",
+        "title": "Systems Administrator",
+        "employer_name": "Infrastructure Inc.",
+        "description": "Maintain server infrastructure, manage networks, and ensure system security.",
+        "location": "Dallas, TX",
+        "apply_url": "https://example.com/careers/systems-admin-17",
+        "date_posted": "2025-05-06T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "technical-writer-18",
+        "title": "Technical Writer",
+        "employer_name": "DocuTech Solutions",
+        "description": "Create clear and concise technical documentation for software products.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/technical-writer-18",
+        "date_posted": "2025-05-07T00:00:00",
+        "job_type": "Contract"
+    },
+    {
+        "id": "sales-representative-19",
+        "title": "Sales Representative",
+        "employer_name": "Growth Hackers LLC",
+        "description": "Generate leads, conduct product demos, and close sales deals.",
+        "location": "Boston, MA",
+        "apply_url": "https://example.com/careers/sales-representative-19",
+        "date_posted": "2025-05-07T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "customer-support-20",
+        "title": "Customer Support Specialist",
+        "employer_name": "HelpDesk Heroes",
+        "description": "Provide technical support and assistance to customers via phone, email, and chat.",
+        "location": "Phoenix, AZ",
+        "apply_url": "https://example.com/careers/customer-support-20",
+        "date_posted": "2025-05-08T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "software-engineer-21",
+        "title": "Software Engineer (Java)",
+        "employer_name": "Enterprise Solutions Ltd.",
+        "description": "Develop enterprise-level applications using Java and Spring framework.",
+        "location": "Atlanta, GA",
+        "apply_url": "https://example.com/careers/software-engineer-java-21",
+        "date_posted": "2025-05-08T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "data-engineer-22",
+        "title": "Data Engineer",
+        "employer_name": "Data Driven Systems",
+        "description": "Build and maintain data pipelines, ETL processes, and data warehouses.",
+        "location": "Austin, TX",
+        "apply_url": "https://example.com/careers/data-engineer-22",
+        "date_posted": "2025-05-09T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "ui-designer-23",
+        "title": "UI Designer",
+        "employer_name": "Creative Designs Ltd.",
+        "description": "Focus on the visual design aspects of user interfaces, creating aesthetically pleasing layouts.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/ui-designer-23",
+        "date_posted": "2025-05-09T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "network-engineer-24",
+        "title": "Network Engineer",
+        "employer_name": "Infrastructure Inc.",
+        "description": "Design, implement, and manage network infrastructure.",
+        "location": "Dallas, TX",
+        "apply_url": "https://example.com/careers/network-engineer-24",
+        "date_posted": "2025-05-10T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "business-analyst-25",
+        "title": "Business Analyst",
+        "employer_name": "Strategic Insights",
+        "description": "Analyze business processes, identify requirements, and propose solutions.",
+        "location": "Washington D.C.",
+        "apply_url": "https://example.com/careers/business-analyst-25",
+        "date_posted": "2025-05-10T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "security-analyst-26",
+        "title": "Security Analyst",
+        "employer_name": "CyberSec Corp",
+        "description": "Monitor security threats, investigate incidents, and implement security measures.",
+        "location": "Reston, VA",
+        "apply_url": "https://example.com/careers/security-analyst-26",
+        "date_posted": "2025-05-11T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "database-admin-27",
+        "title": "Database Administrator (DBA)",
+        "employer_name": "Data Driven Systems",
+        "description": "Manage and maintain databases (SQL Server/PostgreSQL), ensure performance and availability.",
+        "location": "Austin, TX",
+        "apply_url": "https://example.com/careers/database-admin-27",
+        "date_posted": "2025-05-11T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "content-strategist-28",
+        "title": "Content Strategist",
+        "employer_name": "Marketing Masters",
+        "description": "Develop content strategies, manage editorial calendars, and oversee content creation.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/content-strategist-28",
+        "date_posted": "2025-05-12T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "recruiter-29",
+        "title": "Technical Recruiter",
+        "employer_name": "People First Consulting",
+        "description": "Source, screen, and recruit candidates for technical roles.",
+        "location": "Denver, CO",
+        "apply_url": "https://example.com/careers/recruiter-29",
+        "date_posted": "2025-05-12T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "graphic-designer-30",
+        "title": "Graphic Designer",
+        "employer_name": "Creative Designs Ltd.",
+        "description": "Create visual assets for marketing materials, websites, and applications.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/graphic-designer-30",
+        "date_posted": "2025-05-13T00:00:00",
+        "job_type": "Part-time"
+    },
+    {
+        "id": "software-engineer-intern-31",
+        "title": "Software Engineer Intern",
+        "employer_name": "CampusConnect Partner Inc.",
+        "description": "Assist senior engineers with coding, testing, and debugging tasks.",
+        "location": "Seattle, WA",
+        "apply_url": "https://example.com/careers/software-engineer-intern-31",
+        "date_posted": "0001-01-01T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "frontend-intern-32",
+        "title": "Frontend Developer Intern",
+        "employer_name": "Web Innovators",
+        "description": "Learn and contribute to building user interfaces under mentorship.",
+        "location": "San Francisco, CA",
+        "apply_url": "https://example.com/careers/frontend-intern-32",
+        "date_posted": "2025-05-14T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "backend-intern-33",
+        "title": "Backend Engineer Intern",
+        "employer_name": "Data Driven Systems",
+        "description": "Assist with backend service development and database tasks.",
+        "location": "Austin, TX",
+        "apply_url": "https://example.com/careers/backend-intern-33",
+        "date_posted": "2025-05-14T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "devops-intern-35",
+        "title": "DevOps Intern",
+        "employer_name": "Cloud Solutions Group",
+        "description": "Assist with CI/CD pipeline management and infrastructure automation tasks.",
+        "location": "Chicago, IL",
+        "apply_url": "https://example.com/careers/devops-intern-35",
+        "date_posted": "2025-05-15T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "product-manager-intern-36",
+        "title": "Product Manager Intern",
+        "employer_name": "CampusConnect Partner Inc.",
+        "description": "Support product managers with market research, requirements gathering, and feature tracking.",
+        "location": "Seattle, WA",
+        "apply_url": "https://example.com/careers/product-manager-intern-36",
+        "date_posted": "2025-05-16T00:00:00",
+        "job_type": "Internship"
+    },
+    {
+        "id": "ux-researcher-37",
+        "title": "UX Researcher",
+        "employer_name": "User Insights Lab",
+        "description": "Plan and conduct user research studies, analyze findings, and present insights.",
+        "location": "Remote",
+        "apply_url": "https://example.com/careers/ux-researcher-37",
+        "date_posted": "2025-05-16T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "it-support-specialist-38",
+        "title": "IT Support Specialist",
+        "employer_name": "HelpDesk Heroes",
+        "description": "Provide internal IT support, troubleshoot hardware/software issues.",
+        "location": "Phoenix, AZ",
+        "apply_url": "https://example.com/careers/it-support-specialist-38",
+        "date_posted": "2025-05-17T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "solutions-architect-39",
+        "title": "Solutions Architect",
+        "employer_name": "Enterprise Solutions Ltd.",
+        "description": "Design technical solutions to meet client requirements.",
+        "location": "Atlanta, GA",
+        "apply_url": "https://example.com/careers/solutions-architect-39",
+        "date_posted": "2025-05-17T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "scrum-master-40",
+        "title": "Scrum Master",
+        "employer_name": "Agile Delivery Experts",
+        "description": "Facilitate Scrum ceremonies and help teams adhere to Agile principles.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/scrum-master-40",
+        "date_posted": "2025-05-18T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "cloud-support-engineer-41",
+        "title": "Cloud Support Engineer",
+        "employer_name": "Cloud Solutions Group",
+        "description": "Provide technical support for cloud services (AWS/Azure/GCP).",
+        "location": "Chicago, IL",
+        "apply_url": "https://example.com/careers/cloud-support-engineer-41",
+        "date_posted": "2025-05-18T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "machine-learning-engineer-42",
+        "title": "Machine Learning Engineer",
+        "employer_name": "AI Innovations",
+        "description": "Develop, train, and deploy machine learning models.",
+        "location": "Palo Alto, CA",
+        "apply_url": "https://example.com/careers/ml-engineer-42",
+        "date_posted": "2025-05-19T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "site-reliability-engineer-43",
+        "title": "Site Reliability Engineer (SRE)",
+        "employer_name": "Infrastructure Inc.",
+        "description": "Focus on reliability, scalability, and performance of production systems.",
+        "location": "Dallas, TX",
+        "apply_url": "https://example.com/careers/sre-43",
+        "date_posted": "2025-05-19T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "game-developer-44",
+        "title": "Game Developer (Unity)",
+        "employer_name": "Pixel Perfect Studios",
+        "description": "Develop games using the Unity engine and C#.",
+        "location": "Los Angeles, CA",
+        "apply_url": "https://example.com/careers/game-developer-44",
+        "date_posted": "2025-05-20T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "embedded-systems-engineer-45",
+        "title": "Embedded Systems Engineer",
+        "employer_name": "Hardware Innovators",
+        "description": "Design and develop software for embedded systems and microcontrollers.",
+        "location": "San Jose, CA",
+        "apply_url": "https://example.com/careers/embedded-systems-engineer-45",
+        "date_posted": "2025-05-20T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "financial-analyst-46",
+        "title": "Financial Analyst",
+        "employer_name": "Capital Management Group",
+        "description": "Analyze financial data, create forecasts, and support investment decisions.",
+        "location": "New York, NY",
+        "apply_url": "https://example.com/careers/financial-analyst-46",
+        "date_posted": "2025-05-21T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "legal-counsel-47",
+        "title": "Legal Counsel",
+        "employer_name": "Corporate Law Associates",
+        "description": "Provide legal advice on corporate matters, contracts, and compliance.",
+        "location": "Washington D.C.",
+        "apply_url": "https://example.com/careers/legal-counsel-47",
+        "date_posted": "2025-05-21T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "operations-manager-48",
+        "title": "Operations Manager",
+        "employer_name": "Efficiency Experts",
+        "description": "Oversee daily operations, improve processes, and manage resources.",
+        "location": "Chicago, IL",
+        "apply_url": "https://example.com/careers/operations-manager-48",
+        "date_posted": "2025-05-22T00:00:00",
+        "job_type": "Full-time"
+    },
+    {
+        "id": "executive-assistant-49",
+        "title": "Executive Assistant",
+        "employer_name": "Support Staff Solutions",
+        "description": "Provide administrative support to senior executives.",
+        "location": "San Francisco, CA",
+        "apply_url": "https://example.com/careers/executive-assistant-49",
+        "date_posted": "2025-05-22T00:00:00",
+        "job_type": "Part-time"
+    },
+    {
+        "id": "research-scientist-50",
+        "title": "Research Scientist",
+        "employer_name": "Innovation Labs",
+        "description": "Conduct scientific research and experiments in a specific field.",
+        "location": "Cambridge, MA",
+        "apply_url": "https://example.com/careers/research-scientist-50",
+        "date_posted": "2025-05-23T00:00:00",
+        "job_type": "Full-time"
+    }
+]

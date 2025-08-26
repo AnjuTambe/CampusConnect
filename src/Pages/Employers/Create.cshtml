@@ -1,0 +1,42 @@
+@page
+@model CampusConnect.WebSite.Pages.Employers.CreateModel
+@{
+    ViewData["Title"] = "Create New Employer";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="New_Employer.EmployerName" class="form-label"></label>
+                <input asp-for="New_Employer.EmployerName" class="form-control" placeholder="e.g., Contoso Corp" />
+                <span asp-validation-for="New_Employer.EmployerName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="New_Employer.CompanyVision" class="form-label"></label>
+                <textarea asp-for="New_Employer.CompanyVision" class="form-control" rows="3" placeholder="Describe the company's mission and vision..."></textarea>
+                <span asp-validation-for="New_Employer.CompanyVision" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="New_Employer.TechStack" class="form-label"></label>
+                <input asp-for="New_Employer.TechStack" class="form-control" placeholder="e.g., C#, .NET, Azure, React" />
+                <span asp-validation-for="New_Employer.TechStack" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Create Employer</button>
+                <a asp-page="/Dashboard" asp-page-handler="ShowEmployers" asp-route-search_Term="@Model.Search_Term" asp-route-location_Filter="@Model.Location_Filter" asp-route-current_Page="@Model.Current_Page" class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

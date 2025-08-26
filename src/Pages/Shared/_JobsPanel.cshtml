@@ -1,0 +1,170 @@
+@model CampusConnect.WebSite.Pages.DashboardModel
+
+<div class="dashboard-layout-grid">
+    @* 2a. Filtering Panel - Redesigned for better visual hierarchy *@
+    <div class="dashboard-filter-panel">
+        <div class="filter-panel-header">
+            <h5 class="filter-panel-title">Find Your Perfect Job</h5>
+            <button type="button" id="adminModeToggle" class="btn btn-outline-secondary btn-sm">Admin Mode: OFF</button>
+        </div>
+        <form method="get" asp-page="/Dashboard" asp-page-handler="ShowJobs">
+            <div class="filter-form-row">
+                <div class="filter-item">
+                    <label for="searchTerm" class="filter-label">KEYWORDS</label>
+                    <div class="input-group">
+                        <span class="input-group-text filter-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input type="text" id="searchTerm" name="SearchTerm" class="form-control"
+                               placeholder="Job title, skills, or company"
+                               value="@Model.SearchTerm" maxlength="50" />
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <label for="locationFilter" class="filter-label">LOCATION</label>
+                    <div class="input-group">
+                        <span class="input-group-text filter-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <select id="locationFilter" name="LocationFilter" asp-for="LocationFilter" asp-items="Model.LocationOptions" class="form-select">
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <label for="employerFilter" class="filter-label">EMPLOYER</label>
+                    <div class="input-group">
+                        <span class="input-group-text filter-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 21H21V8L12 2L3 8V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 21V12H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 8H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 8H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <select id="employerFilter" name="EmployerNameFilter" asp-for="EmployerNameFilter" asp-items="Model.EmployerFilterOptions" class="form-select">
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <label for="jobTypeFilter" class="filter-label">JOB TYPE</label>
+                    <div class="input-group">
+                        <span class="input-group-text filter-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <select id="jobTypeFilter" name="JobTypeFilter" class="form-select">
+                            <option value="" selected="@(string.IsNullOrEmpty(Model.JobTypeFilter))">All Job Types</option>
+                            <option value="Full-time" selected="@(Model.JobTypeFilter == "Full-time")">Full-time</option>
+                            <option value="Part-time" selected="@(Model.JobTypeFilter == "Part-time")">Part-time</option>
+                            <option value="Internship" selected="@(Model.JobTypeFilter == "Internship")">Internship</option>
+                            <option value="Contract" selected="@(Model.JobTypeFilter == "Contract")">Contract</option>
+                            <option value="Temporary" selected="@(Model.JobTypeFilter == "Temporary")">Temporary</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-separator"></div>
+            <div class="filter-buttons-row">
+                <button type="submit" class="btn btn-primary filter-btn-primary">
+                    Search Jobs
+                </button>
+                <a href="/Dashboard?handler=ShowJobs" class="btn btn-outline-secondary filter-btn-secondary">
+                    Clear Filter
+                </a>
+            </div>
+        </form>
+    </div>
+
+    @* 2b. Left panel of right panel (Job List - Scrollable) *@
+    <div class="dashboard-listing-panel" style="height: 85vh; position: relative;">
+        @* Inner div for scrollable content *@
+        <div style="height: 100%; overflow-y: auto;">
+            @if (Model.ShowJobsList)
+            {
+                @* JobListingViewComponent (cards only) will be invoked here *@
+                @await Component.InvokeAsync("JobListing", new { searchTerm = Model.SearchTerm, locationFilter = Model.LocationFilter, jobTypeFilter = Model.JobTypeFilter, employerNameFilter = Model.EmployerNameFilter, currentPage = Model.CurrentPage })
+            }
+            else
+            {
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <p class="text-muted fst-italic">Select 'Jobs' from the navigation to see listings.</p>
+                </div>
+            }
+        </div>
+        @* Floating Action Button for Create Job - positioned relative to the outer div *@
+        @if (Model.ShowJobsList) @* Optionally, only show FAB if jobs list is active *@
+        {
+            <a asp-page="/Jobs/Create"
+               asp-route-searchTerm="@Model.SearchTerm"
+               asp-route-locationFilter="@Model.LocationFilter"
+               asp-route-employerNameFilter="@Model.EmployerNameFilter"
+               asp-route-currentPage="@Model.CurrentPage"
+               class="btn btn-primary rounded-circle admin-control d-none"
+               style="width: 50px; height: 50px; line-height: 35px; text-align: center; font-size: 1.5rem; z-index: 1050; position: absolute; bottom: 2.5rem; right: 2.5rem;"
+               title="Create New Job">
+                <i class="fas fa-plus"></i>
+            </a>
+        }
+    </div>
+
+    @* 2c. Right panel of right panel (Job Details) *@
+    <div class="dashboard-details-panel">
+        @* Moved existing Job Details logic here *@
+        <div id="jobDetailsPane" class="sticky-top" style="top: 10px;">
+            <h4 class="mb-2">Job Details</h4>
+            @if (Model.SelectedJob != null)
+            {
+                <div class="dashboard-card">
+                    <div class="card-body py-2 px-3">
+                        <h5 class="card-title mb-1 nav-heading-custom-bold">@Model.SelectedJob.Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted small">@Model.SelectedJob.EmployerName</h6>
+                        <p class="card-text mb-1 small"><strong>Location:</strong> @Model.SelectedJob.Location</p>
+                        <p class="card-text mb-1 small"><strong>Posted:</strong> @Model.SelectedJob.DatePosted.ToString("MMM dd, yyyy")</p>
+                        <p class="card-text mb-1 small"><strong>Type:</strong> @Model.SelectedJob.JobType</p>
+                        <p class="card-text small">@Model.SelectedJob.Description</p>
+
+                        <hr class="my-2" />
+                        <div class="mt-2 text-end">
+                            @if (!string.IsNullOrEmpty(Model.SelectedJob.ApplyUrl))
+                            {
+                                <a href="@Model.SelectedJob.ApplyUrl" target="_blank" class="btn btn-success btn-sm me-2">Apply</a>
+                            }
+                            <a asp-page="/Jobs/Edit"
+                               asp-route-id="@Model.SelectedJob.Id"
+                               asp-route-searchTerm="@Model.SearchTerm"
+                               asp-route-locationFilter="@Model.LocationFilter"
+                               asp-route-employerNameFilter="@Model.EmployerNameFilter"
+                               asp-route-currentPage="@Model.CurrentPage"
+                               class="btn btn-primary btn-sm me-2 admin-control d-none">Edit</a>
+                            <a asp-page="/Jobs/Delete"
+                               asp-route-id="@Model.SelectedJob.Id"
+                               asp-route-searchTerm="@Model.SearchTerm"
+                               asp-route-locationFilter="@Model.LocationFilter"
+                               asp-route-employerNameFilter="@Model.EmployerNameFilter"
+                               asp-route-currentPage="@Model.CurrentPage"
+                               class="btn btn-danger btn-sm admin-control d-none">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="dashboard-card">
+                    <div class="card-body py-2 px-3">
+                        <div class="d-flex align-items-center justify-content-center" style="min-height: 200px;">
+                            <p class="text-muted fst-italic">Select a job from the list to view its details here.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

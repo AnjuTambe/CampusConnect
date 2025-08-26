@@ -1,0 +1,137 @@
+[
+    {
+      "employer_name": "Analytics Solutions Co.",
+      "company_vision": "Delivering data-driven insights for business growth.",
+      "tech_stack": "Python, R, SQL, Tableau, Power BI"
+    },
+    {
+      "employer_name": "Creative Designs Ltd.",
+      "company_vision": "Transforming ideas into stunning visual experiences.",
+      "tech_stack": "Adobe Creative Suite, Figma, Sketch, InVision"
+    },
+    {
+      "employer_name": "Web Innovators",
+      "company_vision": "Building the next generation of web applications.",
+      "tech_stack": "React, Angular, Vue.js, Node.js, TypeScript"
+    },
+    {
+      "employer_name": "Data Driven Systems",
+      "company_vision": "Powering decisions with robust data infrastructure.",
+      "tech_stack": "Python, Django, Flask, PostgreSQL, MongoDB, Kafka"
+    },
+    {
+      "employer_name": "CampusConnect Partner Inc.",
+      "company_vision": "Connecting students with opportunities.",
+      "tech_stack": "C#, .NET, Azure, SQL Server, React"
+    },
+    {
+      "employer_name": "Quality Assurance Pros",
+      "company_vision": "Ensuring excellence through rigorous testing.",
+      "tech_stack": "Selenium, Cypress, Jest, TestRail, Jira"
+    },
+    {
+      "employer_name": "Cloud Solutions Group",
+      "company_vision": "Enabling scalable and resilient cloud architectures.",
+      "tech_stack": "AWS, Azure, GCP, Kubernetes, Docker, Terraform"
+    },
+    {
+      "employer_name": "Growth Hackers LLC",
+      "company_vision": "Accelerating business growth through innovative marketing.",
+      "tech_stack": "HubSpot, Salesforce, Google Analytics, SEO, SEM"
+    },
+    {
+      "employer_name": "App Creators Inc.",
+      "company_vision": "Crafting intuitive and performant mobile applications.",
+      "tech_stack": "Swift, Kotlin, React Native, Flutter, Firebase"
+    },
+    {
+      "employer_name": "People First Consulting",
+      "company_vision": "Building strong teams and fostering positive workplace cultures.",
+      "tech_stack": "HRIS Systems, Applicant Tracking Systems (ATS), Payroll Software"
+    },
+    {
+      "employer_name": "Agile Delivery Experts",
+      "company_vision": "Mastering agile methodologies for efficient project delivery.",
+      "tech_stack": "Scrum, Kanban, Jira, Confluence, Azure DevOps"
+    },
+    {
+      "employer_name": "Infrastructure Inc.",
+      "company_vision": "Providing reliable and secure IT infrastructure.",
+      "tech_stack": "Windows Server, Linux, Cisco, VMware, Active Directory"
+    },
+    {
+      "employer_name": "DocuTech Solutions",
+      "company_vision": "Simplifying complex information through clear documentation.",
+      "tech_stack": "MadCap Flare, Adobe FrameMaker, Markdown, Sphinx"
+    },
+    {
+      "employer_name": "HelpDesk Heroes",
+      "company_vision": "Delivering exceptional support with a smile.",
+      "tech_stack": "Zendesk, ServiceNow, ITIL, Remote Support Tools"
+    },
+    {
+      "employer_name": "Enterprise Solutions Ltd.",
+      "company_vision": "Building robust and scalable software for large organizations.",
+      "tech_stack": "Java, Spring, .NET, Microservices, Enterprise Architecture Patterns"
+    },
+    {
+      "employer_name": "Strategic Insights",
+      "company_vision": "Guiding business strategy with insightful analysis.",
+      "tech_stack": "Market Research Tools, SWOT Analysis, Business Process Modeling"
+    },
+    {
+      "employer_name": "CyberSec Corp",
+      "company_vision": "Protecting digital assets in an evolving threat landscape.",
+      "tech_stack": "Firewalls, Intrusion Detection Systems (IDS), SIEM, Penetration Testing Tools"
+    },
+    {
+      "employer_name": "Marketing Masters",
+      "company_vision": "Creating impactful marketing campaigns that resonate.",
+      "tech_stack": "Digital Marketing Platforms, Social Media Marketing, Content Management Systems (CMS)"
+    },
+    {
+      "employer_name": "User Insights Lab",
+      "company_vision": "Understanding user behavior to design better products.",
+      "tech_stack": "UserTesting.com, SurveyMonkey, A/B Testing Tools, Heatmap Software"
+    },
+    {
+      "employer_name": "AI Innovations",
+      "company_vision": "Pioneering artificial intelligence solutions for a smarter future.",
+      "tech_stack": "TensorFlow, PyTorch, scikit-learn, Natural Language Processing (NLP), Computer Vision"
+    },
+    {
+      "employer_name": "Pixel Perfect Studios",
+      "company_vision": "Bringing virtual worlds to life with stunning graphics and gameplay.",
+      "tech_stack": "Unity, Unreal Engine, C++, C#, 3D Modeling Software"
+    },
+    {
+      "employer_name": "Hardware Innovators",
+      "company_vision": "Designing and building the next generation of electronic devices.",
+      "tech_stack": "Embedded C, C++, RTOS, Circuit Design Software, Microcontrollers"
+    },
+    {
+      "employer_name": "Capital Management Group",
+      "company_vision": "Maximizing investment returns through expert financial management.",
+      "tech_stack": "Financial Modeling Software, Bloomberg Terminal, Risk Management Tools"
+    },
+    {
+      "employer_name": "Corporate Law Associates",
+      "company_vision": "Providing expert legal counsel for corporate success.",
+      "tech_stack": "Legal Research Databases, Contract Management Software"
+    },
+    {
+      "employer_name": "Efficiency Experts",
+      "company_vision": "Optimizing operations for maximum productivity.",
+      "tech_stack": "Process Mapping Tools, Lean Six Sigma, Project Management Software"
+    },
+    {
+      "employer_name": "Support Staff Solutions",
+      "company_vision": "Connecting businesses with skilled administrative professionals.",
+      "tech_stack": "Office Productivity Suites, Scheduling Software, Communication Platforms"
+    },
+    {
+      "employer_name": "Innovation Labs",
+      "company_vision": "Exploring new frontiers through cutting-edge research.",
+      "tech_stack": "Scientific Software, Laboratory Equipment, Data Analysis Tools"
+    }
+  ]

@@ -1,0 +1,63 @@
+@page "{id?}"
+@model CampusConnect.WebSite.Pages.Employers.DeleteModel
+@{
+    ViewData["Title"] = "Confirm Delete Employer";
+}
+
+@if (Model.Employer_To_Delete != null)
+{
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4 border-danger">
+                <div class="card-body text-center">
+                    <h1 class="card-title">Deleting Employer</h1>
+                    <h5 class="card-subtitle mb-2 text-danger">@Model.Employer_To_Delete.EmployerName</h5>
+                </div>
+            </div>
+            
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Employer Name
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Employer_To_Delete.EmployerName
+                </dd>
+                <dt class="col-sm-2">
+                    Company Vision
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Employer_To_Delete.CompanyVision
+                </dd>
+                <dt class="col-sm-2">
+                    Tech Stack
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Employer_To_Delete.TechStack
+                </dd>
+            </dl>
+            
+            <form method="post">
+                <input type="hidden" asp-for="Employer_To_Delete.EmployerName" />
+                <input type="hidden" asp-for="EmployerSearchTerm" />
+                <input type="hidden" asp-for="CurrentPage" />
+                
+                <div class="mb-3">
+                    <input type="submit" value="Confirm Delete" class="btn btn-danger" />
+                    <a asp-page="/Dashboard"
+                       asp-page-handler="ShowEmployers"
+                       asp-route-employerSearchTerm="@Model.EmployerSearchTerm"
+                       asp-route-currentPage="@Model.CurrentPage"
+                       class="btn btn-secondary ms-2">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <p>Employer not found or unable to display details for deletion.</p>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} 
+}

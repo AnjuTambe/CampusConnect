@@ -1,0 +1,123 @@
+@model CampusConnect.WebSite.Pages.DashboardModel
+
+<div class="dashboard-layout-grid">
+    @* 2a. Filtering Panel - Consistent with Jobs panel styling *@
+    <div class="dashboard-filter-panel">
+        <div class="filter-panel-header">
+            <h5 class="filter-panel-title">Find Your Perfect Employer</h5>
+            <button type="button" id="adminModeToggleEmployers" class="btn btn-outline-secondary btn-sm">Admin Mode: OFF</button>
+        </div>
+        @* Employer search form *@
+        <form method="get" action="/Dashboard">
+            <div class="filter-form-row">
+                <div class="filter-item">
+                    <label for="employerSearchTerm" class="filter-label">SEARCH EMPLOYERS</label>
+                    <div class="input-group">
+                        <span class="input-group-text filter-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input type="text" id="employerSearchTerm" name="employerSearchTerm" class="form-control"
+                               placeholder="Company name, industry, or keywords"
+                               value="@Model.EmployerSearchTerm" maxlength="50" />
+                    </div>
+                </div>
+            </div>
+            <div class="filter-separator"></div>
+            <div class="filter-buttons-row">
+                <button type="submit" class="btn btn-primary filter-btn-primary">
+                    Search Employers
+                </button>
+                <a href="/Dashboard?handler=ShowEmployers" class="btn btn-outline-secondary filter-btn-secondary">
+                    Clear Filter
+                </a>
+            </div>
+            @* Add a hidden field to ensure we stay in Employers view *@
+            <input type="hidden" name="ActiveView" value="Employers" />
+            <input type="hidden" name="handler" value="ShowEmployers" />
+        </form>
+    </div>
+
+    @* 2b. Left panel of right panel (Employer List - Scrollable) *@
+    <div class="dashboard-listing-panel" style="height: 85vh; position: relative;">
+        @* Inner div for scrollable content *@
+        <div style="height: 100%; overflow-y: auto;">
+            @if (Model.DistinctEmployerNames != null && Model.DistinctEmployerNames.Any())
+            {
+                foreach (var employerName in Model.DistinctEmployerNames)
+                {
+                    <a asp-page="/Dashboard"
+                       asp-page-handler="ShowEmployers"
+                       asp-route-employerId="@employerName"
+                       asp-route-ActiveView="Employers"
+                       class="text-decoration-none text-dark">
+                        <div class="dashboard-card @(Model.SelectedEmployer != null && Model.SelectedEmployer.EmployerName == employerName ? "active" : "")">
+                            <div class="card-body py-2 px-3">
+                                <h6 class="mb-0">@employerName</h6>
+                            </div>
+                        </div>
+                    </a>
+                }
+            }
+            else
+            {
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <p class="text-muted fst-italic">No employers found matching your search criteria.</p>
+                </div>
+            }
+        </div>
+        @* Floating Action Button for Create Employer - positioned relative to the outer div *@
+        @if (Model.DistinctEmployerNames != null && Model.DistinctEmployerNames.Any()) @* Optionally, only show FAB if employers list is active *@
+        {
+            <a asp-page="/Employers/Create"
+               asp-route-employerSearchTerm="@Model.EmployerSearchTerm"
+               class="btn btn-primary rounded-circle admin-control d-none"
+               style="width: 50px; height: 50px; line-height: 35px; text-align: center; font-size: 1.5rem; z-index: 1050; position: absolute; bottom: 2.5rem; right: 2.5rem;"
+               title="Create New Employer">
+                <i class="fas fa-plus"></i>
+            </a>
+        }
+    </div>
+
+    @* 2c. Right panel of right panel (Employer Details) *@
+    <div class="dashboard-details-panel">
+        <div id="employerDetailsPane" class="sticky-top" style="top: 10px;">
+        <h4 class="mb-2">Employer Details</h4>
+        @if (Model.SelectedEmployer != null)
+        {
+            <div class="dashboard-card">
+                <div class="card-body py-2 px-3">
+                    <h5 class="card-title mb-1 nav-heading-custom-bold">@Model.SelectedEmployer.EmployerName</h5>
+                        <p class="card-text mb-1 small"><strong>Vision:</strong> @Model.SelectedEmployer.CompanyVision</p>
+                        <p class="card-text small"><strong>Tech Stack:</strong> @Model.SelectedEmployer.TechStack</p>
+                        @* Add a link to view jobs by this employer *@
+                        <hr class="my-2" />
+                        <div class="mt-2 text-end">
+                            @* This link will trigger filtering jobs by this employer *@
+                            <a asp-page="/Dashboard" asp-page-handler="ShowJobs" asp-route-employerNameFilter="@Model.SelectedEmployer.EmployerName" class="btn btn-secondary btn-sm me-2">View Jobs</a>
+                            <a asp-page="/Employers/Edit"
+                               asp-route-id="@Model.SelectedEmployer.EmployerName"
+                               asp-route-employerSearchTerm="@Model.EmployerSearchTerm"
+                               class="btn btn-primary btn-sm me-2 admin-control d-none">Edit</a>
+                            <a asp-page="/Employers/Delete"
+                               asp-route-id="@Model.SelectedEmployer.EmployerName"
+                               asp-route-employerSearchTerm="@Model.EmployerSearchTerm"
+                               class="btn btn-danger btn-sm admin-control d-none">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        else
+        {
+            <div class="dashboard-card">
+                <div class="card-body py-2 px-3">
+                    <div class="d-flex align-items-center justify-content-center" style="min-height: 200px;">
+                            <p class="text-muted fst-italic">Select an employer from the list to view their details here.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

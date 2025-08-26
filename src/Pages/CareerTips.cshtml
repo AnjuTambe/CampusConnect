@@ -1,0 +1,89 @@
+@page
+@{
+    ViewData["Title"] = "Career Tips";
+}
+
+<div class="container py-5">
+    <h1 class="display-4 text-center mb-5">@ViewData["Title"]</h1>
+    <p class="lead text-center mb-5">
+        Navigate your career path with confidence. Explore our collection of tips, guides, and insights to help you succeed.
+    </p>
+
+    <div class="row">
+        <!-- Tip 1: Resume Building -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Crafting the Perfect Resume</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-10).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">Your resume is often the first impression an employer has of you. Learn how to tailor your resume for each job, highlight your accomplishments effectively, and use action verbs to make your experience stand out...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip 2: Interview Skills -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Ace Your Next Interview</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-7).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">Interviews can be daunting, but preparation is key. Discover common interview questions, learn the STAR method for answering behavioral questions, and get tips on how to make a lasting positive impression...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip 3: Networking -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">The Power of Networking</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-5).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">Building a professional network can open doors to opportunities you might not find otherwise. Learn strategies for effective networking, both online and in-person, and how to nurture those connections...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip 4: Career Exploration -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Exploring Different Career Paths</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-3).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">Not sure what career is right for you? That's okay! We provide insights into various industries, tips for informational interviews, and advice on how to align your passions with potential career options...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip 5: Cover Letters -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Writing Compelling Cover Letters</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-2).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">A great cover letter can make your application stand out. Learn the key components of a successful cover letter, how to tailor it to the employer, and common mistakes to avoid...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip 6: Using CampusConnect Effectively -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Maximizing Your CampusConnect Profile</h3>
+                    <p class="card-text text-muted small">Posted: @DateTime.Now.AddDays(-1).ToString("MMMM dd, yyyy")</p>
+                    <p class="card-text">Your CampusConnect profile is a powerful tool. Discover tips to make your profile shine, how to effectively search for jobs, and ways to engage with employers on the platform...</p>
+                    <a href="#" class="btn btn-outline-primary mt-auto disabled">Read More (Link TBD)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <p><em>More tips and articles coming soon! Check back regularly for the latest advice.</em></p>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+@page "{id}"
+@model CampusConnect.WebSite.Pages.Jobs.DeleteModel
+@{
+    ViewData["Title"] = "Confirm Delete Job";
+}
+
+@if (Model.JobToDelete != null)
+{
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4 border-danger">
+                <div class="card-body text-center">
+                    <h1 class="card-title">Deleting Job</h1>
+                    <h5 class="card-subtitle mb-2 text-danger">@Model.JobToDelete.Title</h5>
+                </div>
+            </div>
+            
+            <dl class="row">
+            <dt class="col-sm-2">
+                Employer
+            </dt>
+            <dd class="col-sm-10">
+                @Model.JobToDelete.EmployerName
+            </dd>
+            <dt class="col-sm-2">
+                Location
+            </dt>
+            <dd class="col-sm-10">
+                @Model.JobToDelete.Location
+            </dd>
+            <dt class="col-sm-2">
+                Date Posted
+            </dt>
+            <dd class="col-sm-10">
+                @Model.JobToDelete.DatePosted.ToShortDateString()
+            </dd>
+            <dt class="col-sm-2">
+                Job Type
+            </dt>
+            <dd class="col-sm-10">
+                @Model.JobToDelete.JobType
+            </dd>
+            <dt class="col-sm-2">
+                Description
+            </dt>
+            <dd class="col-sm-10">
+                @Model.JobToDelete.Description 
+            </dd>
+            @* Add other relevant fields for confirmation as needed *@
+        </dl>
+        
+        <form method="post">
+            @* The ID is passed via the route parameter, but it's good practice
+               to include it in the form as well, especially if OnPost needs it directly from form data.
+               However, our OnPost(string id) gets it from the route.
+               If OnPost() was parameterless and relied on a bound property for ID, this would be essential.
+               For consistency and to ensure the ID is available if the OnPost signature changes, we can add it.
+            *@
+            <input type="hidden" asp-for="JobToDelete.Id" />
+            
+            <div class="mb-3">
+                <input type="submit" value="Confirm Delete" class="btn btn-danger" />
+                <a asp-page="/Dashboard"
+                   asp-page-handler="ShowJobDetails"
+                   asp-route-id="@Model.JobToDelete.Id"
+                   asp-route-searchTerm="@Model.SearchTerm"
+                   asp-route-locationFilter="@Model.LocationFilter"
+                   asp-route-employerNameFilter="@Model.EmployerNameFilter"
+                   asp-route-currentPage="@Model.CurrentPage"
+                   class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+        </form>
+        </div>
+    </div>
+}
+else
+{
+    <p>Job not found or unable to display details for deletion.</p>
+}

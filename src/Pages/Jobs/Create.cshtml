@@ -1,0 +1,70 @@
+@page
+@model CampusConnect.WebSite.Pages.Jobs.CreateModel
+@{
+    ViewData["Title"] = "Create New Job Listing";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            @* asp-validation-summary="ModelOnly" could be added here to show model-level errors *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="NewJob.Title" class="form-label"></label>
+                <input asp-for="NewJob.Title" class="form-control" />
+                <span asp-validation-for="NewJob.Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NewJob.EmployerName" class="form-label"></label>
+                <input asp-for="NewJob.EmployerName" class="form-control" />
+                <span asp-validation-for="NewJob.EmployerName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NewJob.Location" class="form-label"></label>
+                <input asp-for="NewJob.Location" class="form-control" />
+                <span asp-validation-for="NewJob.Location" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NewJob.JobType" class="form-label"></label>
+                <select asp-for="NewJob.JobType" class="form-select">
+                    <option value="">-- Select Job Type --</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Temporary">Temporary</option>
+                </select>
+                <span asp-validation-for="NewJob.JobType" class="text-danger"></span>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="NewJob.ApplyUrl" class="form-label"></label>
+                <input asp-for="NewJob.ApplyUrl" type="url" class="form-control" />
+                <span asp-validation-for="NewJob.ApplyUrl" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NewJob.Description" class="form-label"></label>
+                <textarea asp-for="NewJob.Description" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="NewJob.Description" class="text-danger"></span>
+            </div>
+
+            @* Other fields (IsRemote, etc.) will be added in later tasks *@
+            
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Create Job</button>
+                <a asp-page="/Dashboard" asp-page-handler="ShowJobs" asp-route-searchTerm="@Model.SearchTerm" asp-route-locationFilter="@Model.LocationFilter" asp-route-currentPage="@Model.CurrentPage" class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

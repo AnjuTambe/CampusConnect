@@ -1,0 +1,149 @@
+﻿@page
+@* Removed: @using CampusConnect.WebSite.Components *@
+@model CampusConnect.WebSite.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* Full-width Hero Section with Background Image *@
+<div class="hero-section"> 
+    <img src="~/data/SU-2.jpg" alt="Seattle University Campus" class="hero-image"> 
+    
+    <div class="hero-overlay">
+         <h1 style="color: white;">Careers start here</h1>
+         <p class="lead" style="color: white;">
+            CampusConnect is the premier platform for students and recent graduates to discover exciting internships and job opportunities with leading employers.
+            Explore, connect, and launch your future.
+         </p>
+         <div class="mt-5">
+             <a class="btn btn-primary btn-lg px-4 py-2" asp-page="/Dashboard"><i class="fas fa-search explore-opportunities-icon"></i>Explore Opportunities</a>
+             <a class="btn btn-outline-light btn-lg ms-3 px-4 py-2" asp-page="/AboutUs"><i class="fas fa-info-circle learn-more-icon"></i>Learn More</a>
+         </div>
+    </div>
+</div>
+
+<div class="container">
+    @* Feature Section: For Students & Alumni *@
+    <div class="py-5">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-user-graduate text-primary"></i></span>
+                    <h2 class="display-5 fw-bold">Find Your Future, Faster.</h2>
+                </div>
+                <p class="lead text-muted">
+                    CampusConnect empowers you with the tools and connections to discover opportunities that match your ambitions and skills.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-bullseye fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Tailored Opportunities</h5>
+                        <p class="card-text text-muted">Get job and internship recommendations based on your unique profile and preferences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-handshake fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Direct Employer Access</h5>
+                        <p class="card-text text-muted">Connect with recruiters from top companies actively hiring students and recent grads.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Career Insights</h5>
+                        <p class="card-text text-muted">Explore career paths, gain industry knowledge, and get advice to navigate your journey.</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="divider">
+        <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+
+    @* Feature Section: For Employers *@
+    <div class="py-5">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-building text-primary"></i></span>
+                    <h2 class="display-5 fw-bold">Recruit Top Early Talent.</h2>
+                </div>
+                <p class="lead text-muted">
+                    Access a diverse pool of qualified students and recent graduates. Showcase your brand and simplify your hiring process.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-briefcase fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Targeted Job Postings</h5>
+                        <p class="card-text text-muted">Easily publish your internships and entry-level roles to the right audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-building fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Build Your Brand</h5>
+                        <p class="card-text text-muted">Highlight your company culture and attract candidates who fit your vision.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-users fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-semibold mb-3">Streamlined Connections</h5>
+                        <p class="card-text text-muted">Engage with potential hires and manage applications efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Call to Action Section *@
+<div class="cta-section py-5 mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="cta-content">
+                    <i class="fas fa-rocket fa-3x mb-4"></i>
+                    <h2 class="display-6 fw-bold mb-4">Ready to connect with your future?</h2>
+                    <p class="lead mb-4">Join thousands of students and employers already using CampusConnect to achieve their goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Removed Blazor product list component and script:
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+<script src="_framework/blazor.server.js"></script>
+*@

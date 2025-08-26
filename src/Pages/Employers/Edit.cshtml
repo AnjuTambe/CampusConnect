@@ -1,0 +1,53 @@
+@page "{id?}"
+@model CampusConnect.WebSite.Pages.Employers.EditModel
+@{
+    ViewData["Title"] = "Edit Employer";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card mb-4 border-primary">
+            <div class="card-body text-center">
+                <h1 class="card-title">Editing Employer</h1>
+                <h5 class="card-subtitle mb-2 text-primary">@Model.Employer_To_Update?.EmployerName</h5>
+            </div>
+        </div>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Employer_To_Update.EmployerName" />
+            <input type="hidden" asp-for="EmployerSearchTerm" />
+            <input type="hidden" asp-for="CurrentPage" />
+
+            <div class="mb-3">
+                <label asp-for="Employer_To_Update.EmployerName" class="form-label"></label>
+                <input asp-for="Employer_To_Update.EmployerName" class="form-control" />
+                <span asp-validation-for="Employer_To_Update.EmployerName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Employer_To_Update.CompanyVision" class="form-label"></label>
+                <textarea asp-for="Employer_To_Update.CompanyVision" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Employer_To_Update.CompanyVision" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Employer_To_Update.TechStack" class="form-label"></label>
+                <input asp-for="Employer_To_Update.TechStack" class="form-control" />
+                <span asp-validation-for="Employer_To_Update.TechStack" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a asp-page="/Dashboard"
+                   asp-page-handler="ShowEmployers"
+                   asp-route-employerSearchTerm="@Model.EmployerSearchTerm"
+                   asp-route-currentPage="@Model.CurrentPage"
+                   class="btn btn-secondary ms-2">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
