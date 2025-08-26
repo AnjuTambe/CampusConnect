@@ -1,3 +1,5 @@
+# This is fork of group school project done at https://github.com/AnjuTambe/redhawks
+
 # CampusConnect
 
 CampusConnect is a web application designed to help users find job opportunities. It features job listings, detailed job views, filtering and search capabilities, and administrative functions for managing job postings.
