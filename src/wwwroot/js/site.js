@@ -65,4 +65,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial UI update based on loaded/default state
     updateAdminToggleButtonAppearance(); // Update button if it exists
     updateAdminControlsVisibility(); // Update visibility of all admin controls
+
+    // Scroll Animation Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach((el) => {
+        observer.observe(el);
+    });
 });
